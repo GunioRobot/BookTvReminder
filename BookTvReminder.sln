@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookTvReminder", "BookTvReminder\BookTvReminder.csproj", "{833A0886-6AB1-4990-8054-DFC8979DD18A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookTvReminder.Domain", "BookTvReminder.Domain\BookTvReminder.Domain.csproj", "{AD064DBF-FA79-485C-9E59-0B1B831C0ABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookTvReminder.Domain.Test", "BookTvReminder.Domain.Test\BookTvReminder.Domain.Test.csproj", "{6E4B8AEB-E7A6-4053-96DB-4FADC62472B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{833A0886-6AB1-4990-8054-DFC8979DD18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833A0886-6AB1-4990-8054-DFC8979DD18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833A0886-6AB1-4990-8054-DFC8979DD18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833A0886-6AB1-4990-8054-DFC8979DD18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD064DBF-FA79-485C-9E59-0B1B831C0ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD064DBF-FA79-485C-9E59-0B1B831C0ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD064DBF-FA79-485C-9E59-0B1B831C0ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD064DBF-FA79-485C-9E59-0B1B831C0ABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4B8AEB-E7A6-4053-96DB-4FADC62472B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4B8AEB-E7A6-4053-96DB-4FADC62472B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4B8AEB-E7A6-4053-96DB-4FADC62472B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4B8AEB-E7A6-4053-96DB-4FADC62472B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
