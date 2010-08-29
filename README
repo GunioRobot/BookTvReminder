@@ -1,5 +1,12 @@
-This is a test. Only a test. 
+BookTvReminder is a learning project to give me practice with a few technologies:
+1) MongodDB & NoRM
+2) CSS -- without a real designer to use as a crutch
+3) jQueryUI + plugins
+4) ASP.NET MVC
+... plus a variety of project infrastructure solutions
 
-Gremlins eat kittens.
-Bigfoot loves Birkenstocks.
-Footwear is destiny.
+The functionality of the project is to improve the CSPAN2 BookTV website by making more information available in one interface, without navigating to multiple pages. 
+
+NOTE: This solution is not really setup for others to easily download and open. If I progress to the point where I'm happy with the product, I will add developer-friendliness refactoring to the todo list.
+
+@Alric
