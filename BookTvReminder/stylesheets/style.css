@@ -1,0 +1,32 @@
+﻿
+div.segment
+{
+  height: 100px;
+  overflow: hidden;
+}
+div.segment .image
+{
+  float: left;
+  padding-right: 10px;
+}
+div.segment .image img
+{
+  max-height: 100px;
+  max-width: 75px;
+}
+div.segment-container
+{
+  margin: 10px 0px 0px 10px;
+}
+div.source-icon
+{ 
+}
+
+div.source-icon img
+{  
+  top: 0;
+  right: 0;
+  float: right;
+  height: 16px;
+  width: 16px;  
+}

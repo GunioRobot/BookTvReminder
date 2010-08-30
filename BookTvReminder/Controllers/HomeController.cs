@@ -34,7 +34,7 @@ namespace BookTvReminder.Controllers
       var segments = new SegmentService().GetSegments();
 
       //HACK: To keep working on UI, try to find one with the same title, else return the first one in the list
-      var segment = (segments.FirstOrDefault(s => s.Title.GetHashCode() == titleHash) ?? segments.Last());
+      var segment = (segments.FirstOrDefault(s => (s.Title + s.Day + s.Time).GetHashCode() == titleHash) ?? segments.Last());
 
       ViewData.Model = segment;
       
