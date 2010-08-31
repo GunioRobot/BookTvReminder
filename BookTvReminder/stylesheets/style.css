@@ -1,4 +1,9 @@
-﻿
+﻿body
+{
+  /*background-color:#e9f2ff;*/
+  background-color: #F7FFE5;
+}
+
 div.segment
 {
   height: 100px;
@@ -17,17 +22,24 @@ div.segment .image img
 }
 div.segment-container
 {
-  margin: 10px 0px 0px 10px;  
+  margin: 10px 0px 0px 10px;
 }
 div.source-icon
-{ 
+{
 }
 
 div.source-icon img
-{  
+{
   top: 0;
   right: 0;
   float: right;
   height: 16px;
-  width: 16px;  
+  width: 16px;
 }
+div.ajax-dialog img
+{
+  position: relative;
+  top: 30%;
+  left: 48%;
+}
+
