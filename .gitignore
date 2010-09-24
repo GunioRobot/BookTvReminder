@@ -12,3 +12,4 @@ _ReSharper.*
 *.cache
 ~$*
 *.tmp
+__MVC_BACKUP/*

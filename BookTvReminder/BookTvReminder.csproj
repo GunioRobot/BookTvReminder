@@ -6,7 +6,7 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{833A0886-6AB1-4990-8054-DFC8979DD18A}</ProjectGuid>
-    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{e53f8fea-eae0-44a6-8774-ffd645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BookTvReminder</RootNamespace>
@@ -49,9 +49,7 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC 2\\Assemblies\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -74,6 +72,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\ajax-loader.gif" />
     <Content Include="images\roundedCorner\border_bottom.gif" />
     <Content Include="images\roundedCorner\bottom.png" />
     <Content Include="images\roundedCorner\bottom_right.png" />
@@ -110,8 +109,7 @@
     <Content Include="stylesheets\blueprint\src\reset.css" />
     <Content Include="stylesheets\blueprint\src\typography.css" />
     <Content Include="images\BTVTest.gif" />
-    <Content Include="stylesheets\cluetip\cross.png" />
-    <Content Include="stylesheets\cluetip\jquery.cluetip.css" />
+    <Content Include="images\cross.png" />
     <Content Include="stylesheets\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="stylesheets\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="stylesheets\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -136,9 +134,7 @@
     <Content Include="scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="scripts\jquery-1.4.1.js" />
     <Content Include="scripts\jquery-ui-1.8.4.custom.min.js" />
-    <Content Include="scripts\jquery.cluetip.js" />
     <Content Include="scripts\jquery.hoverIntent.js" />
-    <Content Include="scripts\jquery.hoverIntent.minified.js" />
     <Content Include="stylesheets\style.css" />
     <Content Include="TestStatic.htm" />
     <Content Include="Views\Home\SegmentDetail.aspx" />
@@ -154,6 +150,18 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.min-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookTvReminder.Domain\BookTvReminder.Domain.csproj">
@@ -163,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="stylesheets\components\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
