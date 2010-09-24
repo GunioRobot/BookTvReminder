@@ -82,6 +82,7 @@
     <Compile Include="AWS\Item.cs" />
     <Compile Include="AWS\ItemLookupSample.cs" />
     <Compile Include="AWS\SignedRequestHelper.cs" />
+    <Compile Include="SegmentDurationParser.cs" />
     <Compile Include="Utility\ExtensionMethods.cs" />
     <Compile Include="HtmlLoader.cs" />
     <Compile Include="SegmentService.cs" />

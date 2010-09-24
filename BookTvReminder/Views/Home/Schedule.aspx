@@ -47,7 +47,7 @@
     <%foreach (var segment in ((IEnumerable<Segment>)ViewData["Segments"]))
       { %>
     <%idx++; %>
-    <div class="span-6 segment-container">
+    <div class="span-8 segment-container">
       <div class="box">
         <div class="top">
           <span></span>
@@ -69,7 +69,11 @@
                     </a>
                   </div>
                   <div id="<%="header" + idx%>" class="title">
-                    <%=segment.Title.SubstringOrDefault(0,75,"...") %>
+                    <%=segment.Title.SubstringOrDefault(0,25,"...") %>
+                   Day: <%=segment.Day %>
+                   Time: <%=segment.Time %>
+                   Duration: <%=segment.Duration %>
+                   Duration (M): <%=segment.DurationInMinutes %>
                   </div>
                   <div class="ajax-dialog">
                     <img style="" src="<%= Url.Content("~/images/ajax-loader.gif")%>" alt="Segment detail loading..." /></div>
