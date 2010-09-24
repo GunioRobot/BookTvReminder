@@ -137,6 +137,8 @@
     <Content Include="scripts\jquery.hoverIntent.js" />
     <Content Include="stylesheets\style.css" />
     <Content Include="TestStatic.htm" />
+    <Content Include="TestStatic2.htm" />
+    <Content Include="Views\Home\Schedule.aspx" />
     <Content Include="Views\Home\SegmentDetail.aspx" />
     <Content Include="Views\Home\Test.aspx" />
     <Content Include="Web.config" />

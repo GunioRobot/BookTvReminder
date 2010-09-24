@@ -1,34 +1,36 @@
 ﻿body
 {
-  /*background-color:#e9f2ff;*/
-  background-color: #F7FFE5;
+  /*background-color:#e9f2ff;
+  background-color: #F7FFE5;*/
+  background-color: #E6E8B2;
+  
 }
 
-div.segment
+.segment
 {
   height: 100px;
-  overflow: hidden;
+  overflow: auto;
 }
-div.segment .image
+.segment .image
 {
   float: left;
   padding-left: 5px;
   padding-right: 10px;
 }
-div.segment .image img
+.segment .image img
 {
   max-height: 100px;
   max-width: 75px;
 }
-div.segment-container
+.segment-container
 {
   margin: 10px 0px 0px 10px;
 }
-div.source-icon
+.source-icon
 {
 }
 
-div.source-icon img
+.source-icon img
 {
   top: 0;
   right: 0;

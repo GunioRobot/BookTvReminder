@@ -18,6 +18,14 @@ namespace BookTvReminder.Controllers
       return View();
     }
 
+    public ActionResult Schedule()
+    {
+        ViewData["Message"] = "BookTV Schedule";
+        ViewData["Segments"] = new SegmentService().GetSegments();
+
+        return View();
+    }
+
     public ActionResult About()
     {
       return View();

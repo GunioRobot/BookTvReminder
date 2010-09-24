@@ -56,7 +56,7 @@
           <div class="box-content2">
             <div class="box-padding-light">
               <div class="item">
-                <div class="column segment" style="width:95%">
+                <div class="column segment">
                   <div class="image">
                     <a class="segment" href="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>"
                       title="<%: segment.Title %>" rel="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>">
@@ -69,7 +69,7 @@
                     </a>
                   </div>
                   <div id="<%="header" + idx%>" class="title">
-                    <%=segment.Title.TrimStart('"').Trim().SubstringOrDefault(0,75,"...") %>
+                    <%=segment.Title.SubstringOrDefault(0,75,"...") %>
                   </div>
                   <div class="ajax-dialog">
                     <img style="" src="<%= Url.Content("~/images/ajax-loader.gif")%>" alt="Segment detail loading..." /></div>
