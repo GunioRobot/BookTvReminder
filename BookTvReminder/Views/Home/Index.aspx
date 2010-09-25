@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <%@ Import Namespace="BookTvReminder.Domain" %>
+<%@ Import Namespace="BookTvReminder.Domain.Models" %>
 <%@ Import Namespace="BookTvReminder.Domain.Utility" %>
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">Home
   Page </asp:Content>
@@ -58,8 +59,8 @@
               <div class="item">
                 <div class="column segment" style="width:95%">
                   <div class="image">
-                    <a class="segment" href="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>"
-                      title="<%: segment.Title %>" rel="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>">
+                    <a class="segment" href="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.DayDescription + segment.Time).GetHashCode()%>"
+                      title="<%: segment.Title %>" rel="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.DayDescription + segment.Time).GetHashCode()%>">
                       <img src="<%= segment.ImageUrl%>" alt="<%: segment.Title %>" />
                     </a>
                   </div>

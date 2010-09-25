@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
 <%@ Import Namespace="BookTvReminder.Domain" %>
+<%@ Import Namespace="BookTvReminder.Domain.Models" %>
 <%@ Import Namespace="BookTvReminder.Domain.Utility" %>
 <asp:Content ID="indexTitle" ContentPlaceHolderID="TitleContent" runat="server">Home
   Page </asp:Content>
@@ -58,8 +59,8 @@
               <div class="item">
                 <div class="column segment">
                   <div class="image">
-                    <a class="segment" href="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>"
-                      title="<%: segment.Title %>" rel="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.Day + segment.Time).GetHashCode()%>">
+                    <a class="segment" href="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.DayDescription + segment.Time).GetHashCode()%>"
+                      title="<%: segment.Title %>" rel="<%="http://localhost/BookTvReminder/home/segmentdetail/" + (segment.Title + segment.DayDescription + segment.Time).GetHashCode()%>">
                       <img src="<%= segment.ImageUrl%>" alt="<%: segment.Title %>" />
                     </a>
                   </div>
@@ -69,8 +70,9 @@
                     </a>
                   </div>
                   <div id="<%="header" + idx%>" class="title">
-                    <%=segment.Title.SubstringOrDefault(0,25,"...") %>
-                   Day: <%=segment.Day %>
+                    <%=segment.Title.SubstringOrDefault(0,75,"...") %>
+                   Day: <%=segment.DayDescription %>
+                   Date: <%=segment.Date.ToLongDateString() %>
                    Time: <%=segment.Time %>
                    Duration: <%=segment.Duration %>
                    Duration (M): <%=segment.DurationInMinutes %>

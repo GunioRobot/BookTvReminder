@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<BookTvReminder.Domain.Segment>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<BookTvReminder.Domain.Models.Segment>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	SegmentDetail
@@ -25,7 +25,7 @@
        --%> 
         <ul >
               <li><%=Model.Author%></li>
-              <li><%=Model.Day%></li>
+              <li><%=Model.DayDescription%></li>
               <li><%=Model.Time%></li>
               <li><%=Model.Duration%></li>   
               <li><%=Model.SegmentDetail.Series%></li>

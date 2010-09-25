@@ -1,54 +1,46 @@
-﻿using System;
-using System.IO;
-using System.Net;
+﻿using System.Net;
 
 namespace BookTvReminder.Domain
 {
-  public class HtmlLoader
-  {
-
-    public string LoadUrl(string url)
+    public class HtmlLoader
     {
-      //TODO: AHT - Is there any reason to create a Uri object?
-      string html;
-      var fileName = GetUrlFileName(url);
+        private readonly ContentCacher contentCacher;
 
-      //TODO: AHT - Check for read access, locking?
-
-      if (UseCachedFile(fileName))
-      {        
-        html = File.ReadAllText(fileName);
-      }
-      else
-      {
-        using (var client = new WebClient())
+        public HtmlLoader()
         {
-          html = client.DownloadString(url);
+            contentCacher = new ContentCacher();
         }
-        
-        File.WriteAllText(fileName, html);
-      }
 
-      return html;
+        public string LoadUrl(string url)
+        {
+            //TODO: AHT - Is there any reason to create a Uri object? To validate Url or something?
+            var cacheKey = GetUrlCacheKey(url);
+
+            if (contentCacher.CacheAvailable(cacheKey))
+            {
+                return contentCacher.ReadCache(cacheKey);
+            }
+
+            return ReadContentsFromUrl(url, cacheKey);
+        }
+
+        protected virtual string ReadContentsFromUrl(string url, string cacheKey)
+        {
+            string html;
+            using (var client = new WebClient())
+            {
+                html = client.DownloadString(url);
+            }
+
+            contentCacher.WriteCache(cacheKey, html);
+
+            return html;
+        }
+
+        public string GetUrlCacheKey(string url)
+        {
+            return url.GetHashCode().ToString();
+        }
+
     }
-
-    public string GetUrlFileName(string url)
-    {
-      //TODO: AHT - Make disk-cache directory configurable or in DB
-      const string dir = @"C:\temp\";
-
-      return dir + url.GetHashCode() + ".txt";
-    }
-
-    public bool UseCachedFile(string fileName)
-    {
-      if (!File.Exists(fileName))
-        return false;      
-
-      if (File.GetLastWriteTime(fileName).Date < DateTime.Today)
-        return false;
-
-      return true;
-    }
-  }
 }

@@ -1,13 +1,14 @@
 ﻿using System;
+using BookTvReminder.Domain.Parsers;
 using NUnit.Framework;
 
-namespace BookTvReminder.Domain.Test
+namespace BookTvReminder.Domain.Test.Parsers
 {
     [TestFixture]
     public class SegmentDurationParserTest
     {
 
-        [TestCase("Approx. 1 hr. 24 min.", Result = 84)]        
+        [TestCase("Approx. 1 hr. 24 min.", Result = 84)]
         [TestCase("Approx. 1 hr. 1 min.", Result = 61)]
         [TestCase("Approx. 1 hr. 0 min.", Result = 60)]
         [TestCase("Approx. 1 hr. ", Result = 60)]
@@ -21,7 +22,7 @@ namespace BookTvReminder.Domain.Test
         [TestCase("Approx. 0 min. ", Result = 0)]
         public int DurationRegexTest(string duration)
         {
-            return new SegmentDurationParser().GetDurationInMinutes(duration);
+         return new SegmentDurationParser().GetDurationInMinutes(duration);
         }
 
         [TestCase("abcdef")]

@@ -82,18 +82,26 @@
     <Compile Include="AWS\Item.cs" />
     <Compile Include="AWS\ItemLookupSample.cs" />
     <Compile Include="AWS\SignedRequestHelper.cs" />
-    <Compile Include="SegmentDurationParser.cs" />
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="ContentCacher.cs" />
+    <Compile Include="Models\SegmentAuthor.cs" />
+    <Compile Include="Models\SegmentDetail.cs" />
+    <Compile Include="Parsers\SegmentDayParser.cs" />
+    <Compile Include="Parsers\SegmentDurationParser.cs" />
+    <Compile Include="Parsers\SegmentParser.cs" />
+    <Compile Include="Utility\ExceptionHelper.cs" />
     <Compile Include="Utility\ExtensionMethods.cs" />
     <Compile Include="HtmlLoader.cs" />
     <Compile Include="SegmentService.cs" />
-    <Compile Include="HmltNodeHelper.cs" />
+    <Compile Include="Utility\HtmlNodeExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Segment.cs" />
+    <Compile Include="Models\Segment.cs" />
     <Compile Include="Service References\AWSEC\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Utility\UtilityMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
